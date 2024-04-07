@@ -1,0 +1,159 @@
+FUNCTIONS IN JAVASCRIPT
+
+Types of Functions :
+
+-> Function Declarations
+-> Function Expressions
+-> Named Functions
+-> Anonymous Function
+-> Arrow Functions (ES6+)
+-> IIFE Function
+-> Higher Order Function
+-> Constructor Function
+-> Generator function
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Function Declarations:
+
+   -> Function Declarations: A function declaration defines a named function at the top of its scope.
+
+Exapmle:
+
+function add (a,b) {
+console.log( a + b);
+}
+add(5,5);
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+2.  Function Expressions:
+
+   -> A function expression defines a function and assigns it to a variable.
+
+Exapmle:
+
+const add = function (a,b) {
+console.log(a+b);
+}
+add(5,5);
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Named Functions:
+   
+   -> A named function is a function that has a name, which can be used to refer to the function.
+
+Exapmle:
+
+function add (a,b){
+console.log(a+b);
+}
+add(5,5);
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Anonymous Function
+   
+  -> An anonymous function is a function that does not have a name.
+
+Exapmle:
+
+const add = function ( a,b ) {
+ console.log(a,b)
+}
+add( 5,5 );
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Arrow Functions (ES6+)
+  
+ ->   An arrow function is a shorthand syntax for defining a function expression.
+
+Example:
+
+const add = ( a, b ) => {
+   console.log( a + b )
+}
+
+add( 5,5 );
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+6. IIFE Function ( Immediately Invoked Function Expression ):
+
+  ->  An IIFE (Immediately Invoked Function Expression) is a function that is defined and invoked immediately.
+
+Example:
+
+( function ( a,b ) {
+   console.log ( a+b );
+} ) ( 5, 5 );
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+7. Higher Order Function:
+
+  -> A higher order function is a function that takes one or more functions as arguments or returns a function as its result.
+
+Example:
+
+function greet(name, callback) {
+    console.log("Hello, " + name + "!");
+    
+    callback();
+}
+
+function gokul () {
+    console.log("gokul");
+}
+
+greet("sanjai", gokul);
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+8. Constructor Function:
+
+   ->  A constructor function is a function that is used to create new objects.
+
+Exapmle:
+
+function rectangle (width, height){
+    this.width = width;
+    this.height = height;
+    this. area = function (){
+        return this.width * this.height;
+    }
+}
+
+const result = new rectangle(100, 200);
+console.log(result.area())
+
+// output
+// 20000
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+9. Generator function:
+
+    ->  A generator function is a special kind of function that can pause its execution and then resume from where it paused.
+
+Example:
+
+function* idGenerator() {
+  let index = 0;
+  while (true) {
+    yield index;
+    index++;
+  }
+}
+
+const gen = idGenerator();
+
+console.log(gen.next().value); // 0
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
